@@ -1,93 +1,149 @@
 import React from "react";
-
+import "./styles.css";
+import Form from "./form";
 interface Student {
   name: string;
-  image: string;
+  img: string;
   review: string;
+  role: string;
+  company: string;
+  salary: string;
+  quote: string;
+  skills: Array<string>;
 }
 
 const students: Student[] = [
   {
-    name: "Shubham Doshi",
-    image: "shubham.jpeg",
-    review:
-      "RSsofttecs helped me master Java and Spring Boot with hands-on projects. Loved the real-world approach!",
+    name: "Priya Sharma",
+    role: "Software Engineer",
+    company: "TCS",
+    salary: "₹4.2 LPA",
+    quote: "Placement cell support helped me stand out.",
+    skills: ["Java", "Spring Boot", "React"],
+    img: "https://images.pexels.com/photos/3775535/pexels-photo-3775535.jpeg",
+    review: "Placement cell support helped me stand out."
   },
   {
-    name: "Pandurang Kadam",
-    image: "PAndurang.jpeg",
-    review:
-      "Amazing teaching style. The support from the mentors made it easy to crack interviews!",
+    name: "Rahul Patel",
+    role: "Full Stack Developer",
+    company: "Infosys",
+    salary: "₹5.8 LPA",
+    quote: "The training gave me real confidence.",
+    skills: ["Node.js", "MongoDB", "Angular"],
+    img: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
+    review: "The training gave me real confidence."
   },
   {
-    name: "Hemraj Kamble",
-    image: "Hemraj.jpeg",
-    review:
-      "The courses were well-structured and helped me land a job in just 3 months. Thank you RSsofttecs!",
+    name: "Sneha Verma",
+    role: "UI/UX Designer",
+    company: "Cognizant",
+    salary: "₹3.5 LPA",
+    quote: "Design systems helped me crack my interview!",
+    skills: ["Figma", "HTML", "CSS"],
+    img: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
+    review: "Design systems helped me crack my interview!"
   },
   {
-    name: "Rutuja Khose",
-    image: "Rutuja.jpeg",
-    review:
-      "Practical learning, mock interviews, and placement assistance made RSsofttecs the best choice.",
-  },
-   {
-    name: "Rushikesh Chitale",
-    image: "Rushikesh.jpeg",
-    review:
-      "RSsofttecs helped me master Java and Spring Boot with hands-on projects. Loved the real-world approach!",
+    name: "Aniket Rao",
+    role: "Backend Developer",
+    company: "Capgemini",
+    salary: "₹4.8 LPA",
+    quote: "DSA practice helped me a lot.",
+    skills: ["Python", "Django", "MySQL"],
+    img: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg",
+    review: "DSA practice helped me a lot."
   },
   {
-    name: "Kajal Patil",
-    image: "Kajal.jpeg",
-    review:
-      "Amazing teaching style. The support from the mentors made it easy to crack interviews!",
+    name: "Kavita Nair",
+    role: "QA Engineer",
+    company: "Wipro",
+    salary: "₹3.9 LPA",
+    quote: "Testing skills gave me clarity.",
+    skills: ["Selenium", "Postman", "Java"],
+    img: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
+    review: "Testing skills gave me clarity."
   },
   {
-    name: "Shital Chavan",
-    image: "Shital.jpeg",
-    review:
-      "The courses were well-structured and helped me land a job in just 3 months. Thank you RSsofttecs!",
+    name: "Neha Kulkarni",
+    role: "Data Analyst",
+    company: "Tech Mahindra",
+    salary: "₹5.0 LPA",
+    quote: "Excel + Python = Job success!",
+    skills: ["Excel", "Power BI", "Python"],
+    img: "https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg",
+    review: "Excel + Python = Job success!"
   },
   {
-    name: "Tejashri Jadhav",
-    image: "Tejashri.jpeg",
-    review:
-      "Practical learning, mock interviews, and placement assistance made RSsofttecs the best choice.",
+    name: "Siddharth Singh",
+    role: "Cyber Security Analyst",
+    company: "Accenture",
+    salary: "₹6.5 LPA",
+    quote: "Labs and CTFs were game changers.",
+    skills: ["Wireshark", "Nmap", "Hacking"],
+    img: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg",
+    review: "Labs and CTFs were game changers."
   },
   {
-    name: "Ajay Thule",
-    image: "Ajay.jpeg",
-    review:
-      "Practical learning, mock interviews, and placement assistance made RSsofttecs the best choice.",
+    name: "Rohan Mehta",
+    role: "DevOps Engineer",
+    company: "HCL",
+    salary: "₹6.2 LPA",
+    quote: "CI/CD projects boosted my resume.",
+    skills: ["Docker", "AWS", "Jenkins"],
+    img: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg",
+    review: "CI/CD projects boosted my resume."
+  },
+  {
+    name: "Priya Sharma",
+    role: "Software Engineer",
+    company: "TCS",
+    salary: "₹4.2 LPA",
+    quote: "Placement cell support helped me stand out.",
+    skills: ["Java", "Spring Boot", "React"],
+    img: "https://images.pexels.com/photos/3775535/pexels-photo-3775535.jpeg",
+    review: "Placement cell support helped me stand out."
   },
 ];
 
-const Placement: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 py-12 px-4">
-      <h1 className="text-4xl font-bold text-center mb-10 text-blue-700">
-        Our Placed Students & Their Reviews
-      </h1>
+const AlumniCard = ({ alumni }) => (
+  <div className="alumni-card">
+    <div className="alumni-header">
+      <img src={alumni.img} className="alumni-img" alt={alumni.name} />
+      <div>
+        <h4 className="alumni-name">{alumni.name}</h4>
+        <p className="alumni-role">{alumni.role}</p>
+        <p className="alumni-company">{alumni.company}</p>
+      </div>
+    </div>
+    <span className="alumni-salary">{alumni.salary}</span>
+    <p className="alumni-quote">"{alumni.quote}"</p>
+    <div className="alumni-skills">
+      {alumni.skills.map((skill, idx) => (
+        <span className="skill-tag" key={idx}>{skill}</span>
+      ))}
+    </div>
+  </div>
+);
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {students.map((student, index) => (
-          <div
-            key={index}
-            className="bg-white shadow-md rounded-xl p-6 text-center"
-          >
-            <img
-              src={student.image}
-              alt={student.name}
-              className="w-24 h-24 mx-auto rounded-full mb-4 object-cover"
-            />
-            <h2 className="text-xl font-semibold mb-2">{student.name}</h2>
-            <p className="text-gray-700 text-sm">{student.review}</p>
-          </div>
+const AlumniSection = () => {
+  return (
+    <div className="alumni-wrapper">
+      <h2 className="alumni-title">
+        Real stories from our alumni who transformed their careers with our placement support
+      </h2>
+
+      <div className="alumni-grid">
+        {students.map((alumni, index) => (
+          <AlumniCard key={index} alumni={alumni} />
         ))}
       </div>
+
+      <div className="alumni-button-wrap">
+        <button className="alumni-button">View All Success Stories</button>
+      </div>
+       {/* <Form/> */}
     </div>
   );
 };
 
-export default Placement;
+export default AlumniSection;

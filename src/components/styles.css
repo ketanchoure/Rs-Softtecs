@@ -1,0 +1,181 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f8f8ff;
+}
+
+.alumni-wrapper {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.alumni-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.alumni-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.alumni-card {
+  background-color: #eef0ff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.alumni-card:hover {
+  transform: translateY(-5px);
+}
+
+.alumni-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.alumni-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.alumni-name {
+  font-size: 18px;
+  margin: 0;
+  color: #111;
+}
+
+.alumni-role {
+  font-weight: bold;
+  color: #6b46c1;
+  margin: 2px 0;
+}
+
+.alumni-company {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.alumni-salary {
+  display: inline-block;
+  background-color: #d4f8d4;
+  color: #1e9029;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.alumni-quote {
+  font-style: italic;
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.alumni-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background-color: #ddd7ff;
+  color: #333;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 12px;
+}
+
+.alumni-button-wrap {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.alumni-button {
+  background-color: #661aff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.alumni-button:hover {
+  background-color: #4d0ecf;
+}
+
+/* ======= Responsive Styles ======= */
+@media (max-width: 768px) {
+  .alumni-wrapper {
+    padding: 15px;
+  }
+
+  .alumni-title {
+    font-size: 1.5rem;
+  }
+
+  .alumni-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .alumni-card {
+    padding: 16px;
+  }
+
+  .alumni-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .alumni-name {
+    font-size: 16px;
+  }
+
+  .alumni-role,
+  .alumni-company,
+  .alumni-salary,
+  .alumni-quote {
+    font-size: 13px;
+  }
+
+  .skill-tag {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  .alumni-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .alumni-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .alumni-img {
+    margin-bottom: 10px;
+  }
+
+  .alumni-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
