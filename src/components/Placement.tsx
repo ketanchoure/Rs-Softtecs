@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./styles.css";
-import Form from "./form";
+// import Form from "./form";
 
 interface Student {
   name: string;
@@ -154,7 +154,7 @@ const AlumniSection = () => {
       </div>
 
       {/* <Form /> */}
-       <Form/>
+       {/* <Form/> */}
     </div>
   );
 };

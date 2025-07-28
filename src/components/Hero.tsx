@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
+import Form from "./form.tsx";
 
 interface FormData {
   name: string;
@@ -89,85 +90,10 @@ const HeroWithForm: React.FC = () => {
           </div>
 
           {/* RIGHT: Form */}
-          <div className="bg-white rounded shadow-md border p-2 max-w-md w-full mx-auto">
-            <h2 className="text-2xl font-bold mb-6">Get Your Job Offer Now!</h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label className="block font-medium mb-1">Name</label>
-                <input
-                  name="name"
-                  type="text"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Name"
-                  className="w-full border rounded p-2 outline-green-700"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block font-medium mb-1">Email</label>
-                <input
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Email"
-                  className="w-full border rounded p-2 outline-green-700"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block font-medium mb-1">Mobile Number</label>
-                <input
-                  name="mobile"
-                  type="tel"
-                  value={formData.mobile}
-                  onChange={handleChange}
-                  placeholder="Mobile Number"
-                  pattern="[0-9]{10}"
-                  maxLength={10}
-                  className="w-full border rounded p-2 outline-green-700"
-                  required
-                />
-              </div>
-              {/* <div>
-                <label className="block font-medium mb-1">City</label>
-                <input
-                  name="city"
-                  type="text"
-                  value={formData.city}
-                  onChange={handleChange}
-                  placeholder="City"
-                  className="w-full border rounded p-2 outline-green-700"
-                  required
-                />
-              </div> */}
-              <div>
-                <label className="block font-medium mb-1">Select Course</label>
-                <select
-                  name="course"
-                  value={formData.course}
-                  onChange={handleChange}
-                  className="w-full border rounded p-2"
-                >
-                  <option value="Full Stack Java">Full Stack Java</option>
-                  <option value="Full Stack Python">Full Stack Python</option>
-                  <option value="MERN Stack">Data Analyst</option>
-                  <option value="Data Science">.Net</option>
-                  <option value="Data Science">Salesforce</option>
-                  <option value="Data Science">DevOps</option>
-                  <option value="Data Science">Software Testing</option>
-                  <option value="Data Science">Cloud Computing</option>
-                </select>
-              </div>
-              <button
-                type="submit"
-                className="bg-green-700 hover:bg-green-800 text-white px-6 py-2 rounded mt-2"
-              >
-                Submit
-              </button>
-            </form>
-          </div>
+          {/* <div className="bg-white rounded shadow-md border p-2 max-w-md w-full mx-auto">
+            <h2 className="text-2xl font-bold mb-6">Get Your Job Offer Now!</h2> */}
+              <Form/>
+          {/* </div> */}
         </div>
       </div>
     </section>
