@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./styles.css";
 import Form from "./form";
+
 interface Student {
   name: string;
   img: string;
@@ -14,99 +17,99 @@ interface Student {
 
 const students: Student[] = [
   {
-    name: "Priya Sharma",
+    name: "Pandurang Kadam",
     role: "Software Engineer",
-    company: "TCS",
+    company: "Insprit Vision",
     salary: "₹4.2 LPA",
     quote: "Placement cell support helped me stand out.",
     skills: ["Java", "Spring Boot", "React"],
-    img: "https://images.pexels.com/photos/3775535/pexels-photo-3775535.jpeg",
+    img: "PAndurang.jpeg",
     review: "Placement cell support helped me stand out."
   },
   {
-    name: "Rahul Patel",
+    name: "Ajay Thule",
     role: "Full Stack Developer",
     company: "Infosys",
     salary: "₹5.8 LPA",
     quote: "The training gave me real confidence.",
     skills: ["Node.js", "MongoDB", "Angular"],
-    img: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
+    img: "Ajay.jpeg",
     review: "The training gave me real confidence."
   },
   {
-    name: "Sneha Verma",
+    name: "Kajal Patil",
     role: "UI/UX Designer",
     company: "Cognizant",
     salary: "₹3.5 LPA",
     quote: "Design systems helped me crack my interview!",
     skills: ["Figma", "HTML", "CSS"],
-    img: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
+    img: "Kajal.jpeg",
     review: "Design systems helped me crack my interview!"
   },
   {
-    name: "Aniket Rao",
+    name: "Hemraj Kamble",
     role: "Backend Developer",
     company: "Capgemini",
     salary: "₹4.8 LPA",
     quote: "DSA practice helped me a lot.",
     skills: ["Python", "Django", "MySQL"],
-    img: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg",
+    img: "Hemraj.jpeg",
     review: "DSA practice helped me a lot."
   },
   {
-    name: "Kavita Nair",
+    name: "Shital Chavan",
     role: "QA Engineer",
     company: "Wipro",
     salary: "₹3.9 LPA",
     quote: "Testing skills gave me clarity.",
     skills: ["Selenium", "Postman", "Java"],
-    img: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
+    img: "Shital.jpeg",
     review: "Testing skills gave me clarity."
   },
   {
-    name: "Neha Kulkarni",
+    name: "Rushikesh Chitale",
     role: "Data Analyst",
     company: "Tech Mahindra",
     salary: "₹5.0 LPA",
     quote: "Excel + Python = Job success!",
     skills: ["Excel", "Power BI", "Python"],
-    img: "https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg",
+    img: "Rushikesh.jpeg",
     review: "Excel + Python = Job success!"
   },
   {
-    name: "Siddharth Singh",
+    name: "Rutuja Khose",
     role: "Cyber Security Analyst",
     company: "Accenture",
     salary: "₹6.5 LPA",
     quote: "Labs and CTFs were game changers.",
     skills: ["Wireshark", "Nmap", "Hacking"],
-    img: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg",
+    img: "Rutuja.jpeg",
     review: "Labs and CTFs were game changers."
   },
   {
-    name: "Rohan Mehta",
+    name: "Tejashri Jadhav",
     role: "DevOps Engineer",
     company: "HCL",
     salary: "₹6.2 LPA",
     quote: "CI/CD projects boosted my resume.",
     skills: ["Docker", "AWS", "Jenkins"],
-    img: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg",
+    img: "Tejashri.jpeg",
     review: "CI/CD projects boosted my resume."
   },
   {
-    name: "Priya Sharma",
+    name: "Shubham Doshi",
     role: "Software Engineer",
     company: "TCS",
     salary: "₹4.2 LPA",
     quote: "Placement cell support helped me stand out.",
     skills: ["Java", "Spring Boot", "React"],
-    img: "https://images.pexels.com/photos/3775535/pexels-photo-3775535.jpeg",
+    img: "shubham.jpeg",
     review: "Placement cell support helped me stand out."
   },
 ];
 
-const AlumniCard = ({ alumni }) => (
-  <div className="alumni-card">
+const AlumniCard = ({ alumni }: { alumni: Student }) => (
+  <div className="alumni-card" data-aos="fade-down-left">
     <div className="alumni-header">
       <img src={alumni.img} className="alumni-img" alt={alumni.name} />
       <div>
@@ -126,6 +129,14 @@ const AlumniCard = ({ alumni }) => (
 );
 
 const AlumniSection = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: false,
+    });
+  }, []);
+
   return (
     <div className="alumni-wrapper">
       <h2 className="alumni-title">
@@ -141,7 +152,8 @@ const AlumniSection = () => {
       <div className="alumni-button-wrap">
         <button className="alumni-button">View All Success Stories</button>
       </div>
-       {/* <Form/> */}
+
+      {/* <Form /> */}
     </div>
   );
 };

@@ -78,7 +78,7 @@ const HeroWithForm: React.FC = () => {
                 <div className="text-sm text-muted-foreground">Students Placed</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">50+</div>
+                <div className="text-3xl font-bold text-primary">250+</div>
                 <div className="text-sm text-muted-foreground">Partner Companies</div>
               </div>
               <div className="text-center">
