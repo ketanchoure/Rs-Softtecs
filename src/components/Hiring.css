@@ -1,0 +1,63 @@
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  /* background-color: #000000; For contrast */
+}
+
+.marquee {
+  /* display: flex;
+  gap: 40px;
+  white-space: nowrap; */
+  display: flex;
+  gap: 40px;
+  animation: scroll-left 10s linear infinite;
+}
+
+.scroll-left {
+  animation: scrollLeft 30s linear infinite;
+}
+
+.scroll-right {
+  animation: scrollRight 30s linear infinite;
+}
+
+.logo-box {
+  background-color: rgb(244, 236, 236);
+  border-radius: 12px;
+  padding: 10px;
+  min-width: 140px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.logo-box img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.logo-box:hover {
+  transform: scale(1.05);
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

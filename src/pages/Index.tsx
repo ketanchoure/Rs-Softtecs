@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Programs from "@/components/Programs";
 import Features from "@/components/Features";
 import Placement from "@/components/Placement";
+import HiringMarquee from "@/components/Hiring";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -13,6 +14,7 @@ const Index = () => {
       <Programs />
       <Features />
       <Placement/>
+      <HiringMarquee/>
       <Footer />
     </div>
   );
