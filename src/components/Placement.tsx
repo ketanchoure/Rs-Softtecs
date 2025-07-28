@@ -141,7 +141,7 @@ const AlumniSection = () => {
       <div className="alumni-button-wrap">
         <button className="alumni-button">View All Success Stories</button>
       </div>
-       {/* <Form/> */}
+       <Form/>
     </div>
   );
 };
