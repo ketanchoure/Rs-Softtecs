@@ -154,6 +154,7 @@ const AlumniSection = () => {
       </div>
 
       {/* <Form /> */}
+       <Form/>
     </div>
   );
 };
