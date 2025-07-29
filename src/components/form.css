@@ -10,10 +10,8 @@
   /* backdrop-filter: blur(5px) brightness(1.2); */
   /* filter: blur(5px); */
   /* background-color: #4c3ab0da; */
-background: #FBBA00;
-background: linear-gradient(335deg, rgba(251, 186, 0, 1) 0%, rgba(153, 114, 99, 1) 8%, rgba(76, 58, 176, 1) 69%);
-  box-shadow: 2px 2px 20px 5px gray;
-  background-size: cover;
+/* background: #0a185c;
+background: linear-gradient(324deg, rgba(10, 24, 92, 1) 2%, rgba(33, 9, 171, 1) 72%); */
 }
 /* .form-container::before{
   background-size: cover;
@@ -67,8 +65,8 @@ z-index: -1;
   width: 100%;
   height: 15%;
   border-radius: 50px;
-  margin: 1% 0 3% 0;
-  box-shadow: 0px 0px 3px 4px gray;
+  margin: 4% 0 5% 0;
+  /* box-shadow: 0px 0px 3px 4px gray; */
   transition: calc(0.5s);
 }
 .form-button:hover{
