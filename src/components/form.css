@@ -6,11 +6,21 @@
   height: 100%;
   margin: 0% 0% 0 auto;
   color: white;
-  /* background-image: url(./IMG/form-desing.png); */
-  background-color: #4c3ab0da;
-  position:static;
+  /* background-image: url(./IMG/network.jpg); */
+  /* backdrop-filter: blur(5px) brightness(1.2); */
+  /* filter: blur(5px); */
+  /* background-color: #4c3ab0da; */
+background: #FBBA00;
+background: linear-gradient(335deg, rgba(251, 186, 0, 1) 0%, rgba(153, 114, 99, 1) 8%, rgba(76, 58, 176, 1) 69%);
   box-shadow: 2px 2px 20px 5px gray;
+  background-size: cover;
 }
+/* .form-container::before{
+  background-size: cover;
+background-position: center;
+filter: blur(8px);
+z-index: -1;
+} */
 .fdesing{
     height: 600px;
     width: 700px;
@@ -23,6 +33,7 @@
 .form-label {
   display: block;
   margin-bottom: 4px;
+  margin-left: 3%;
   font-weight: 600;
 }
 
@@ -33,14 +44,16 @@
   border-radius: 4px;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  /* background-color: transparent; */
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.913);
+  color: black;
 }
 
 /* Style for the 4th input box dropdown list */
 .form-group:nth-of-type(4) .form-input {
   color: black;
-  /* background-color:  #4c3ab0d0; */
-
+  background-color:  rgba(255, 255, 255, 0.913);
+  border-radius: 50px;
 }
 
 .form-button {
@@ -54,13 +67,13 @@
   width: 100%;
   height: 15%;
   border-radius: 50px;
-  margin: 1% 0 0% 0;
+  margin: 1% 0 3% 0;
   box-shadow: 0px 0px 3px 4px gray;
-  transition: calc(1s);
+  transition: calc(0.5s);
 }
 .form-button:hover{
-  /* background-color:  #50b03a; */
-  transform: scale(1.1);
+  background-color:  #ffd86b;
+  /* transform: scale(1.1); */
   /* color: white;
   box-shadow: 0px 0px 3px 4px rgba(255, 247, 0, 0.779); */
 }
