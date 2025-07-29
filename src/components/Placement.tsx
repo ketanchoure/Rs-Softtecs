@@ -139,6 +139,7 @@ const AlumniSection = () => {
 
   return (
     <div className="alumni-wrapper">
+      <h1 className="Success">Success Stories</h1>
       <h2 className="alumni-title">
         Real stories from our alumni who transformed their careers with our placement support
       </h2>

@@ -14,11 +14,11 @@ const Form: React.FC = () => {
   };
 
   return (
-    <div className="form-container">
+    <div className="form-container bg-gradient-to-br from-purple-800 via-indigo-800 to-black text-white">
       {/* <img className='fdesing' src={fdesing}> */}
       <form onSubmit={handleSubmit}>
         <h1 className='hed'>Welcome to Rs Softtecs</h1>
-        <p className='cantent-hed'>Stay ahead in your learning journey with a detailed syllabus. Download<br/> now to explore all topics and course structure.</p>
+        <p className='cantent-hed'>Stay ahead in your learning journey with a detailed syllabus. Download now to explore all topics and course structure.</p>
         <div className="form-group">
           <label htmlFor="name" className="form-label">Full Name</label>
           <input
