@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css'; // Import the CSS file
+import desctop from './IMG/Desktop.png';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -68,7 +69,43 @@ const Contact: React.FC = () => {
   };
 
   return (
+    <div>
+    <img className='contact-img-form' src={desctop}></img>
+    <p className='contact-text-form'>let's Start  a Conversation</p>
+    <div className='contact-non_diply-div'>
+      <div className='contact-info-side'>
+        <p className="contact-title">Have questions? We're here to help!</p>
+        <p>Whether you're curious about our courses, need help choosing the right program, or want to know about placements and timings — our team is ready to assist you.
+Reach out to us and we’ll get back to you as soon as possible!</p><br/>
+        <p>✅ What you can contact us for:</p><br/>
+        <p>Course details & fees<br/>
+
+          Demo class scheduling<br/>
+
+          Certification & placement support<br/>
+
+          Technical support or queries</p><br/>
+
+          <p>📬 Get in Touch</p><br/>
+        <p>📍 Address: 4th Floor, Bhosale Shinde Arcade, JM Road, Near Deccan Bus Stop, Pune<br/>
+
+          📞 Phone: 8767899362<br/>
+
+          📧 Email: aniketsupekar2004@gmail.com<br/>
+
+          🌐 Website: [Your Website URL]<br/>
+
+          🕒 Office Hours: 9:00 AM – 7:00 PM (Mon – Sat)<br/>
+          
+          </p>
+
+      </div>
+      
+    
+
+
     <div className="contact-container " >
+      
       <h2 className="contact-title">Contact Us</h2>
       {isSubmitted && (
         <div className="contact-success">
@@ -116,6 +153,8 @@ const Contact: React.FC = () => {
           Send Message
         </button>
       </form>
+    </div>
+    </div>
     </div>
   );
 };

@@ -6,11 +6,12 @@
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 45%;
 }
 
 .contact-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #333;
   margin-bottom: 1.5rem;
   font-weight: 700;
@@ -144,4 +145,26 @@
     padding: 0.75rem;
     font-size: 0.9rem;
   }
+}
+.contact-img-form{
+  height: 100%;
+  width: 100%;
+  margin: 0 0%;
+  background-size: cover;
+}
+.contact-text-form{
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  padding: 5% 0;
+}
+.contact-non_diply-div{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.contact-info-side{
+  width: 45%;
+  padding-left: 5%;
+  padding-top: 2%;
 }
