@@ -1,50 +1,44 @@
+import React, { FormEvent, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { 
-  Facebook, 
-  Twitter, 
-  Instagram, 
-  Linkedin, 
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
   Youtube,
   Mail,
   Phone,
-  MapPin
 } from "lucide-react";
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
+const Footer: React.FC = () => {
+  const currentYear: number = new Date().getFullYear();
 
-  const quickLinks = [
-    { name: "About Us", href: "#" },
-    { name: "Our Programs", href: "#" },
-    { name: "Success Stories", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Careers", href: "#" },
-  ];
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  const programs = [
-    { name: "Foundation Program", href: "#" },
-    { name: "Professional Program", href: "#" },
-    { name: "Expert Program", href: "#" },
-    { name: "Corporate Training", href: "#" },
-    { name: "Placement Support", href: "#" },
-  ];
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
-  const resources = [
-    { name: "Free Masterclass", href: "#" },
-    { name: "Download Syllabus", href: "#" },
-    { name: "Student Portal", href: "#" },
-    { name: "Support Center", href: "#" },
-    { name: "Community", href: "#" },
-  ];
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    setFormData({ name: "", email: "", message: "" });
+  };
 
   return (
     <footer className="bg-tech-dark text-white">
-      {/* Main Footer */}
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Company Info */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="space-y-6">
             <div className="flex items-center space-x-2">
               <div className="bg-gradient-primary w-10 h-10 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">RS</span>
@@ -55,12 +49,11 @@ const Footer = () => {
             </div>
 
             <p className="text-gray-300 text-base leading-relaxed">
-              Empowering the next generation of tech professionals with world-class education 
-              and career guidance. Join thousands of successful students who have transformed 
-              their careers with us.
+              Empowering the next generation of tech professionals with world-class
+              education and career guidance. Join thousands of successful students who
+              have transformed their careers with us.
             </p>
 
-            {/* Contact Info */}
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary" />
@@ -70,13 +63,8 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-primary" />
                 <span className="text-gray-300">contact@rssofttecs.com</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-primary" />
-                <span className="text-gray-300">Karve Nagar, Pune</span>
-              </div>
             </div>
 
-            {/* Social Links */}
             <div className="flex flex-wrap gap-3 mt-4">
               {[Facebook, Twitter, Instagram, Linkedin, Youtube].map((Icon, index) => (
                 <a
@@ -90,60 +78,77 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-sm">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <a 
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+          {/* Locations */}
+          <div className="flex flex-col gap-6">
+            <h3 className="text-xl font-bold">Our Locations</h3>
+            <div className="flex flex-col sm:flex-row gap-4">
+              {/* Deccan */}
+              <div className="flex-1 space-y-2">
+                <iframe
+                  className="w-full h-48 rounded"
+                  loading="lazy"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.257718510098!2d73.8436811!3d18.5172524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9def03dcfbb%3A0x426a5a51c3a72bde!2sRSSofttecs!5e0!3m2!1sen!2sin!4v1754114818517!5m2!1sen!2sin"
+                ></iframe>
+                <p className="font-semibold text-gray-200 text-sm">
+                  Office No 2, 4th Floor, Bhosale Shinde Arcade, JM Road, Near Deccan Bus Stop, Pune
+                </p>
+              </div>
+
+              {/* Karve Nagar */}
+              <div className="flex-1 space-y-2">
+                <iframe
+                  className="w-full h-48 rounded"
+                  loading="lazy"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.8975032064095!2d73.81171567456519!3d18.488301370160425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf0060be0469%3A0x527943f74e396e51!2sRS%20Softtecs%20-%20Best%20Java%20Classes%20in%20Pune!5e0!3m2!1sen!2sin!4v1754115039991!5m2!1sen!2sin"
+                ></iframe>
+                <p className="font-semibold text-gray-200 text-sm">
+                  Office No 29/B Wing, 4th Floor, Yashashree Park, Warje Malwadi Rd, Near Karve Nagar PMT Bus Stop, Karve Nagar, Pune
+                </p>
+              </div>
+            </div>
           </div>
 
-          {/* Programs */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Programs</h3>
-            <ul className="space-y-2 text-sm">
-              {programs.map((program) => (
-                <li key={program.name}>
-                  <a 
-                    href={program.href}
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    {program.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Contact Form */}
+          <div className="w-full max-w-md bg-gray-900 p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold mb-4 text-white">Contact Us</h3>
+            <form onSubmit={handleSubmit} className="space-y-4 mb-0">
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                placeholder="Your Name"
+                required
+                className="w-full p-3 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                placeholder="Your Email"
+                required
+                className="w-full p-3 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
+              />
 
-          {/* Resources */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Resources</h3>
-            <ul className="space-y-2 text-sm">
-              {resources.map((resource) => (
-                <li key={resource.name}>
-                  <a 
-                    href={resource.href}
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    {resource.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
+                rows={4}
+                placeholder="Your Message"
+                className="w-full p-3 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
+                required
+              ></textarea>
+              <Button type="submit" className="w-full bg-primary text-white hover:bg-primary/90">
+                Send Message
+              </Button>
+            </form>
           </div>
-        </div>       
+        </div>
       </div>
 
-      {/* Bottom Bar */}
+      {/* Footer Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm">
