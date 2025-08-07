@@ -4,33 +4,34 @@ body {
   background-color: #f8f8ff;
 }
 
-.alumni-wrapper {
+.placement-wrapper {
   max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
 }
 
-.alumni-title {
+.placement-title {
   text-align: center;
   font-size: 16px;
   margin-bottom: 30px;
   color: black;
 }
 
-.Success{
+.placement-success-title {
   text-align: center;
   font-size: 35px;
   color: black;
   font-weight: 800;
   margin-bottom: 20px;
 }
-.alumni-grid {
+
+.placement-grid {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-.alumni-card {
+.placement-card {
   background-color: #eef0ff;
   border-radius: 15px;
   padding: 20px;
@@ -39,43 +40,43 @@ body {
   cursor: pointer;
 }
 
-.alumni-card:hover {
+.placement-card:hover {
   transform: translateY(-5px);
 }
 
-.alumni-header {
+.placement-header {
   display: flex;
   align-items: center;
   gap: 15px;
   margin-bottom: 10px;
 }
 
-.alumni-img {
+.placement-img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.alumni-name {
+.placement-name {
   font-size: 18px;
   margin: 0;
   color: #111;
 }
 
-.alumni-role {
+.placement-role {
   font-weight: bold;
   color: #6b46c1;
   margin: 2px 0;
 }
 
-.alumni-company {
+.placement-company {
   margin: 0;
   font-size: 14px;
   color: #555;
 }
 
-.alumni-salary {
+.placement-salary {
   display: inline-block;
   background-color: #d4f8d4;
   color: #1e9029;
@@ -85,20 +86,20 @@ body {
   margin: 10px 0;
 }
 
-.alumni-quote {
+.placement-quote {
   font-style: italic;
   font-size: 14px;
   color: #444;
   margin-bottom: 10px;
 }
 
-.alumni-skills {
+.placement-skills {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.skill-tag {
+.placement-skill-tag {
   background-color: #ddd7ff;
   color: #333;
   font-size: 12px;
@@ -106,12 +107,12 @@ body {
   border-radius: 12px;
 }
 
-.alumni-button-wrap {
+.placement-button-wrap {
   text-align: center;
   margin-top: 30px;
 }
 
-.alumni-button {
+.placement-button {
   background-color: #661aff;
   color: white;
   padding: 12px 24px;
@@ -122,50 +123,50 @@ body {
   transition: 0.3s ease;
 }
 
-.alumni-button:hover {
+.placement-button:hover {
   background-color: #4d0ecf;
 }
 
 /* ======= Responsive Styles ======= */
 @media (max-width: 768px) {
-  .alumni-wrapper {
+  .placement-wrapper {
     padding: 15px;
   }
 
-  .alumni-title {
+  .placement-title {
     font-size: 1.5rem;
   }
 
-  .alumni-grid {
+  .placement-grid {
     grid-template-columns: 1fr;
   }
 
-  .alumni-card {
+  .placement-card {
     padding: 16px;
   }
 
-  .alumni-img {
+  .placement-img {
     width: 50px;
     height: 50px;
   }
 
-  .alumni-name {
+  .placement-name {
     font-size: 16px;
   }
 
-  .alumni-role,
-  .alumni-company,
-  .alumni-salary,
-  .alumni-quote {
+  .placement-role,
+  .placement-company,
+  .placement-salary,
+  .placement-quote {
     font-size: 13px;
   }
 
-  .skill-tag {
+  .placement-skill-tag {
     font-size: 11px;
     padding: 4px 8px;
   }
 
-  .alumni-button {
+  .placement-button {
     width: 100%;
     padding: 12px;
     font-size: 0.95rem;
@@ -173,16 +174,16 @@ body {
 }
 
 @media (max-width: 480px) {
-  .alumni-header {
+  .placement-header {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .alumni-img {
+  .placement-img {
     margin-bottom: 10px;
   }
 
-  .alumni-button {
+  .placement-button {
     padding: 10px 20px;
     font-size: 0.9rem;
   }
