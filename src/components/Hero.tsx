@@ -90,12 +90,12 @@ const HeroWithForm: React.FC = () => {
           </div>
 
           {/* RIGHT: Form */}
-          {/* <div className="bg-white rounded shadow-md border p-2 max-w-md w-full mx-auto">
-            <h2 className="text-2xl font-bold mb-6">Get Your Job Offer Now!</h2> */}
-              <Form/>
-          {/* </div> */}
+          {/* <div className="bg-white rounded shadow-md border p-2 max-w-md w-full mx-auto"> */}
+            {/* <h2 className="text-2xl font-bold mb-6"></h2> */}
+            <Form/>
+          </div>
         </div>
-      </div>
+      {/* </div> */}
     </section>
   );
 };

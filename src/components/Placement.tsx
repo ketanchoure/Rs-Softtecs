@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./styles.css";
-// import Form from "./form";
+import Contact from "./Contact";
 
 interface Student {
   name: string;
@@ -109,20 +109,20 @@ const students: Student[] = [
 ];
 
 const AlumniCard = ({ alumni }: { alumni: Student }) => (
-  <div className="alumni-card" data-aos="fade-down-left">
-    <div className="alumni-header">
-      <img src={alumni.img} className="alumni-img" alt={alumni.name} />
+  <div className="placement-card" data-aos="fade-down-left">
+    <div className="placement-header">
+      <img src={alumni.img} className="placement-img" alt={alumni.name} />
       <div>
-        <h4 className="alumni-name">{alumni.name}</h4>
-        <p className="alumni-role">{alumni.role}</p>
-        <p className="alumni-company">{alumni.company}</p>
+        <h4 className="placement-name">{alumni.name}</h4>
+        <p className="placement-role">{alumni.role}</p>
+        <p className="placement-company">{alumni.company}</p>
       </div>
     </div>
-    <span className="alumni-salary">{alumni.salary}</span>
-    <p className="alumni-quote">"{alumni.quote}"</p>
-    <div className="alumni-skills">
+    <span className="placement-salary">{alumni.salary}</span>
+    <p className="placement-quote">"{alumni.quote}"</p>
+    <div className="placement-skills">
       {alumni.skills.map((skill, idx) => (
-        <span className="skill-tag" key={idx}>{skill}</span>
+        <span className="placement-skill-tag" key={idx}>{skill}</span>
       ))}
     </div>
   </div>
@@ -138,24 +138,23 @@ const AlumniSection = () => {
   }, []);
 
   return (
-    <div className="alumni-wrapper">
-      <h1 className="Success">Success Stories</h1>
-      <h2 className="alumni-title">
+    <div className="placement-wrapper">
+      <h1 className="placement-success-title">Success Stories</h1>
+      <h2 className="placement-title">
         Real stories from our alumni who transformed their careers with our placement support
       </h2>
 
-      <div className="alumni-grid">
+      <div className="placement-grid">
         {students.map((alumni, index) => (
           <AlumniCard key={index} alumni={alumni} />
         ))}
       </div>
 
-      <div className="alumni-button-wrap">
-        <button className="alumni-button">View All Success Stories</button>
+      <div className="placement-button-wrap">
+        <button className="placement-button">View All Success Stories</button>
       </div>
 
-      {/* <Form /> */}
-       {/* <Form/> */}
+      <Contact/>
     </div>
   );
 };

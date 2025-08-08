@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './form.css';
-//import fdesing from "../components/IMG/form-desing.png";
 
 const Form: React.FC = () => {
   const [name, setName] = useState('');
@@ -15,10 +14,9 @@ const Form: React.FC = () => {
 
   return (
     <div className="form-container bg-gradient-to-br from-purple-800 via-indigo-800 to-black text-white">
-      {/* <img className='fdesing' src={fdesing}> */}
       <form onSubmit={handleSubmit}>
-        <h1 className='hed'>Welcome to Rs Softtecs</h1>
-        <p className='cantent-hed'>Stay ahead in your learning journey with a detailed syllabus. Download now to explore all topics and course structure.</p>
+        <h1 className='form-heading'>Welcome to Rs Softtecs</h1>
+        <p className='form-content-heading'>Stay ahead in your learning journey with a detailed syllabus. Download now to explore all topics and course structure.</p>
         <div className="form-group">
           <label htmlFor="name" className="form-label">Full Name</label>
           <input
@@ -44,7 +42,7 @@ const Form: React.FC = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="name" className="form-label">Email</label>
+          <label htmlFor="email" className="form-label">Email</label>
           <input
             id="email"
             type="email"
@@ -72,11 +70,10 @@ const Form: React.FC = () => {
             <option value="html">HTML</option>
           </select>
         </div>
-        <button type="submit" className="form-button">
+        <button type="submit" className="form-submit-button">
           Submit
         </button>
       </form>
-      {/* </img> */}
     </div>
   );
 };
