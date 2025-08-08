@@ -30,9 +30,6 @@ const enquirySchema = new mongoose.Schema({
         enum: ['Pending', 'Contacted', 'Enrolled', 'Not Interested'],
         default: 'Pending'
     },
-    counselor_assigned: {
-        type: String
-    },
     comments: {
         type: String
     },
