@@ -20,6 +20,9 @@ const HeroWithForm: React.FC = () => {
     course: "Full Stack Java",
   });
 
+  const [showModal, setShowModal] = useState(false);
+  const [isReviewOpen, setIsReviewOpen] = useState(false);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
@@ -30,18 +33,17 @@ const HeroWithForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
-    // Add API or validation here
   };
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 pt-20 pb-16">
+    <section className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 pt-20 pb-16 relative">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* LEFT: Hero Text Content */}
+          {/* LEFT: Hero Text */}
           <div className="space-y-8">
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                <span className="text-foreground">Freashers Are Fighter's</span>
+                <span className="text-foreground">Freshers Are Fighter's</span>
                 <br />
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
                   They Fight For Their First Job!!!
@@ -90,12 +92,51 @@ const HeroWithForm: React.FC = () => {
           </div>
 
           {/* RIGHT: Form */}
-          {/* <div className="bg-white rounded shadow-md border p-2 max-w-md w-full mx-auto"> */}
-            {/* <h2 className="text-2xl font-bold mb-6"></h2> */}
-            <Form/>
+          <Form />
+        </div>
+      </div>
+
+      {/* WhatsApp Floating Button */}
+      <a
+        href="https://wa.me/+919970981875?"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="transition-transform transform hover:scale-105 fixed bottom-10 right-10 z-50"
+      >
+        <img
+          src="whatsapp (2).png"
+          alt="WhatsApp Logo"
+          className="w-16 h-16 animate-float"
+        />
+      </a>
+
+      {/* Google Review Floating Button */}
+      <button
+        onClick={() => setIsReviewOpen(true)}
+        className="fixed bottom-10 left-10 z-50 bg-black shadow-lg rounded-full p-3 hover:scale-105 transition-transform"
+      >
+        <img src="Google.webp" alt="Google Reviews" className="w-14 h-14" />
+      </button>
+
+      {/* Google Review Modal */}
+      {isReviewOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[100]">
+          <div className="bg-white rounded-lg w-[90%] md:w-[70%] lg:w-[50%] h-[80%] relative shadow-lg">
+            <button
+              onClick={() => setIsReviewOpen(false)}
+              className="absolute top-3 right-3 text-black text-2xl font-bold hover:text-red-500"
+            >
+              ×
+            </button>
+            <iframe
+              src="https://www.google.com/search?sca_esv=85c04323f33f3047&rlz=1C1CHBF_enIN1059IN1059&sxsrf=AE3TifMslY0ORP1a1bg0G_nJLYyVA5svnA:1755061002030&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E-JZz8FzjB63pbEXUxwBYGcOd9yhl0w30pzNSkhl7iRZE5w8vkJuuB-eNpLbfY6BcyEKA0j9jn4OH5L4wl9srjR253D6&q=RSSofttecs+Reviews&sa=X&ved=2ahUKEwiV8tbc_4aPAxU5oGMGHb_dKc8Q0bkNegQIHxAD&biw=1536&bih=695&dpr=1.25"
+              title="Google Review"
+              className="w-full h-full rounded-lg"
+              frameBorder="0"
+            ></iframe>
           </div>
         </div>
-      {/* </div> */}
+      )}
     </section>
   );
 };
