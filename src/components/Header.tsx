@@ -37,7 +37,7 @@ const Header = () => {
           {/* Logo Image */}
           <div className="flex items-center space-x-2">
               <img
-                src="/Final_Logo_Page1-removebg-preview (1.png" //C:\Desktop\rs-softtecs-academy-hub-main\public\Final_Logo_Page1-removebg-preview (1.png
+                src="/Final_Logo_Page1-removebg-preview.png"
                 alt="RS Softtecs Logo"
                 className="h-[60px] w-auto object-contain"
               />
