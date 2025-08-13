@@ -3,6 +3,7 @@ import Programs from "@/components/Programs";
 import Features from "@/components/Features";
 import Placement from "@/components/Placement";
 import HiringMarquee from "@/components/Hiring";
+import GoogleReviews from "@/components/GoogleReviews";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
@@ -15,6 +16,7 @@ const Index = () => {
       <Features />
       <Placement/>
       <HiringMarquee/>
+      <GoogleReviews/>
       <Footer />
     </div>
   );
