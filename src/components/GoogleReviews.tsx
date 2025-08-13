@@ -261,15 +261,15 @@ const GoogleReviewSection: React.FC = () => {
         {/* Google Review Links at Bottom */}
         <div className="mt-12 flex justify-center flex-wrap gap-4">
           <a
-            href="https://www.google.com/search?q=rs+softech-best+java+classes+in+pune#"
+            href="https://tinyurl.com/rssfotech-deccan"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
           >
-            View All Google Reviews of RS Softech Branch 1
+            View All Google Reviews of RS Softech Branch De
           </a>
           <a
-            href="https://www.google.com/search?q=rs+softech+karve+nagar"
+            href="https://tinyurl.com/rssfotech-karvenagar"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"

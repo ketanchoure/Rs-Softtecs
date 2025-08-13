@@ -115,7 +115,8 @@ const HeroWithForm: React.FC = () => {
         onClick={() => setIsReviewOpen(true)}
         className="fixed bottom-10 left-10 z-50 bg-black shadow-lg rounded-full p-3 hover:scale-105 transition-transform"
       >
-        <img src="Google.webp" alt="Google Reviews" className="w-14 h-14" />
+        {/* <img src="Google.webp" alt="Google Reviews" className="w-14 h-14" /> */}
+        <h2>google</h2>
       </button>
 
       {/* Google Review Modal */}
@@ -129,7 +130,7 @@ const HeroWithForm: React.FC = () => {
               ×
             </button>
             <iframe
-              src="https://www.google.com/search?sca_esv=85c04323f33f3047&rlz=1C1CHBF_enIN1059IN1059&sxsrf=AE3TifMslY0ORP1a1bg0G_nJLYyVA5svnA:1755061002030&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E-JZz8FzjB63pbEXUxwBYGcOd9yhl0w30pzNSkhl7iRZE5w8vkJuuB-eNpLbfY6BcyEKA0j9jn4OH5L4wl9srjR253D6&q=RSSofttecs+Reviews&sa=X&ved=2ahUKEwiV8tbc_4aPAxU5oGMGHb_dKc8Q0bkNegQIHxAD&biw=1536&bih=695&dpr=1.25"
+              src="https://www.google.com/search?q=RS+Softtecs+-+Best+Java+Classes+in+Pune+Reviews"
               title="Google Review"
               className="w-full h-full rounded-lg"
               frameBorder="0"
