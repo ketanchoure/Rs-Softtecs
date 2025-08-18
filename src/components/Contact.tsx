@@ -75,9 +75,9 @@ const Contact: React.FC = () => {
     <div className='contact-non_diply-div'>
       <div className='contact-info-side'>
         <p className="contact-title">Have questions? We're here to help!</p>
-        <p>Whether you're curious about our courses, need help choosing the right program, or want to know about placements and timings — our team is ready to assist you.
+        <p className='for-bold-text'>Whether you're curious about our courses, need help choosing the right program, or want to know about placements and timings — our team is ready to assist you.
 Reach out to us and we’ll get back to you as soon as possible!</p><br/>
-        <p>✅ What you can contact us for:</p><br/>
+        <p className='for-bold-text'>✅ What you can contact us for:</p><br/>
         <p>Course details & fees<br/>
 
           Demo class scheduling<br/>
@@ -86,7 +86,7 @@ Reach out to us and we’ll get back to you as soon as possible!</p><br/>
 
           Technical support or queries</p><br/>
 
-          <p>📬 Get in Touch</p><br/>
+          <p className='for-bold-text'>📬 Get in Touch</p><br/>
         <p>📍 Address: 4th Floor, Bhosale Shinde Arcade, JM Road, Near Deccan Bus Stop, Pune<br/>
 
           📞 Phone: 8767899362<br/>
