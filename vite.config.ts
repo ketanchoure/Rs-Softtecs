@@ -8,6 +8,19 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    hmr: {
+      overlay: true,
+      clientPort: 8080,
+    },
+    // Fix WebSocket connectivity issues
+    watch: {
+      usePolling: false,
+      useFsEvents: false,
+    },
+    // Ensure proper CORS handling
+    cors: true,
+    // Add fallback for potential networking issues
+    strictPort: false,
   },
   plugins: [
     react(),
@@ -18,5 +31,23 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  // Add build optimizations to prevent fetch errors
+  optimizeDeps: {
+    include: [
+      'react', 
+      'react-dom', 
+      'react-router-dom',
+      'lucide-react',
+      '@radix-ui/react-slot',
+      'clsx',
+      'tailwind-merge'
+    ],
+  },
+  // Ensure proper asset handling
+  base: '/',
+  // Add environment variables for better error handling
+  define: {
+    global: 'globalThis',
   },
 }));

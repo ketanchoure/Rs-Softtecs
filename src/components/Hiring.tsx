@@ -21,8 +21,8 @@ const HiringMarquee = () => {
 const repeated = [...companyLogos, ...companyLogos];
 
 return (
-  <section className="min-h-screen bg-gradient-to-br from-purple-800 via-indigo-800 to-black text-white flex flex-col justify-center items-center overflow-hidden px-4 py-25">
-    <h1 className="text-4xl font-bold mb-12 text-center">Our Hiring Partners</h1>
+  <section className="min-h-screen bg-gradient-to-br from-purple-800 via-indigo-800 to-black text-white flex flex-col justify-center items-center overflow-hidden px-4 py-16">
+    <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center">Our Hiring Partners</h1>
 
     <div className="marquee-wrapper">
       <div className="marquee scroll-left">

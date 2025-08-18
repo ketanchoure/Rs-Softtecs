@@ -187,20 +187,22 @@ const GoogleReviewSection: React.FC = () => {
   };
 
   return (
-    <section className="py-10 px-4 bg-gray-100">
+    <section className="py-8 sm:py-10 px-4 bg-gray-100">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="flex items-center gap-2 mb-6">
-          <img src="/Google.webp" alt="Google" className="w-8 h-8" />
-          <span className="font-semibold">Rating</span>
-          <span className="text-yellow-500 flex items-center ml-1 font-semibold">
-            4.9 <Star className="w-4 h-4 fill-yellow-400 text-yellow-500 ml-1" />
-          </span>
-          <span className="text-sm text-gray-700 ml-2">Based on 59 Reviews</span>
+        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 mb-6 text-center sm:text-left">
+          <div className="flex items-center gap-2">
+            <img src="/Google.webp" alt="Google" className="w-6 h-6 sm:w-8 sm:h-8" />
+            <span className="font-semibold text-sm sm:text-base">Rating</span>
+            <span className="text-yellow-500 flex items-center ml-1 font-semibold text-sm sm:text-base">
+              4.9 <Star className="w-3 h-3 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-500 ml-1" />
+            </span>
+          </div>
+          <span className="text-xs sm:text-sm text-gray-700 sm:ml-2">Based on 59 Reviews</span>
         </div>
 
         {/* Review Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mt-8 sm:mt-10">
           {reviews.map((review, i) => {
             const isExpanded = expanded[i];
             const shouldTruncate = review.message.length > 200;
@@ -211,43 +213,43 @@ const GoogleReviewSection: React.FC = () => {
             return (
               <div
                 key={i}
-                className="bg-white rounded-xl shadow-md px-6 pt-10 pb-5 relative hover:shadow-lg transition"
+                className="bg-white rounded-xl shadow-md px-4 sm:px-6 pt-10 pb-5 relative hover:shadow-lg transition"
               >
                 {/* Google Logo */}
                 <img
                   src="/Google.webp"
                   alt="Google"
-                  className="w-8 h-8 absolute top-4 left-4"
+                  className="w-6 h-6 sm:w-8 sm:h-8 absolute top-3 sm:top-4 left-3 sm:left-4"
                 />
 
                 {/* Avatar */}
-                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
+                <div className="absolute -top-6 sm:-top-8 left-1/2 transform -translate-x-1/2">
                   <img
                     src={review.avatar}
                     alt={review.name}
-                    className="w-16 h-16 rounded-full border-4 border-white shadow-md object-cover"
+                    className="w-12 h-12 sm:w-16 sm:h-16 rounded-full border-4 border-white shadow-md object-cover"
                   />
                 </div>
 
                 {/* Review Content */}
-                <div className="mt-10 text-center">
-                  <h4 className="font-semibold">{review.name}</h4>
+                <div className="mt-8 sm:mt-10 text-center">
+                  <h4 className="font-semibold text-sm sm:text-base">{review.name}</h4>
                   {review.date && (
-                    <p className="text-sm text-gray-500 mb-1">{review.date}</p>
+                    <p className="text-xs sm:text-sm text-gray-500 mb-1">{review.date}</p>
                   )}
                   <div className="flex justify-center mb-2 text-yellow-500">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400" />
+                      <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-yellow-400" />
                     ))}
                   </div>
-                  <p className="text-sm text-gray-700">
+                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                     {visibleText}
                     {shouldTruncate && !isExpanded && "..."}
                   </p>
                   {shouldTruncate && (
                     <button
                       onClick={() => toggleExpand(i)}
-                      className="text-blue-500 text-sm mt-1 hover:underline"
+                      className="text-blue-500 text-xs sm:text-sm mt-1 hover:underline"
                     >
                       {isExpanded ? "See less" : "See more"}
                     </button>
@@ -259,12 +261,12 @@ const GoogleReviewSection: React.FC = () => {
         </div>
 
         {/* Google Review Links at Bottom */}
-        <div className="mt-12 flex justify-center flex-wrap gap-4">
+        <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">
           <a
             href="https://www.google.com/search?q=rs+softech-best+java+classes+in+pune#"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+            className="w-full sm:w-auto text-center bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded text-sm sm:text-base"
           >
             View All Google Reviews of RS Softech Branch 1
           </a>
@@ -272,7 +274,7 @@ const GoogleReviewSection: React.FC = () => {
             href="https://www.google.com/search?q=rs+softech+karve+nagar"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+            className="w-full sm:w-auto text-center bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded text-sm sm:text-base"
           >
             View All Google Reviews of RS Softech Branch 2
           </a>

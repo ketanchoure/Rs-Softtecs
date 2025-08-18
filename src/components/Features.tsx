@@ -80,21 +80,21 @@ const Features = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 lg:mb-6">
             Why Choose
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               {" "}
               RS Softtecs
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             We provide everything you need to succeed in your tech career journey
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto">
           {features.map((feature) => (
             <Card
               key={feature.title}
@@ -122,24 +122,24 @@ const Features = () => {
         </div>
 
         {/* Bottom Stats */}
-        <div className="mt-20">
-          <div className="bg-gradient-hero rounded-2xl p-8 lg:p-12 text-white" data-aos="fade-up">
-            <div className="grid md:grid-cols-4 gap-8 text-center">
+        <div className="mt-16 lg:mt-20">
+          <div className="bg-gradient-hero rounded-2xl p-6 sm:p-8 lg:p-12 text-white" data-aos="fade-up">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 text-center">
               <div>
-                <div className="text-4xl lg:text-5xl font-bold mb-2">1000+</div>
-                <div className="text-lg opacity-90">Students Trained</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-1 sm:mb-2">1000+</div>
+                <div className="text-sm sm:text-base lg:text-lg opacity-90">Students Trained</div>
               </div>
               <div>
-                <div className="text-4xl lg:text-5xl font-bold mb-2">98%</div>
-                <div className="text-lg opacity-90">Placement Rate</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-1 sm:mb-2">98%</div>
+                <div className="text-sm sm:text-base lg:text-lg opacity-90">Placement Rate</div>
               </div>
               <div>
-                <div className="text-4xl lg:text-5xl font-bold mb-2">100+</div>
-                <div className="text-lg opacity-90">Hiring Partners</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-1 sm:mb-2">100+</div>
+                <div className="text-sm sm:text-base lg:text-lg opacity-90">Hiring Partners</div>
               </div>
               <div>
-                <div className="text-4xl lg:text-5xl font-bold mb-2">10L</div>
-                <div className="text-lg opacity-90">Highest Package</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-1 sm:mb-2">10L</div>
+                <div className="text-sm sm:text-base lg:text-lg opacity-90">Highest Package</div>
               </div>
             </div>
           </div>

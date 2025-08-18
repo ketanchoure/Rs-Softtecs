@@ -112,22 +112,22 @@ const courses = [
 const CourseCard = ({ course }) => (
   <div
     data-aos="zoom-in"
-    className="w-full max-w-sm h-[75vh] overflow-y-auto bg-white rounded-xl shadow-md border p-4 flex flex-col justify-between relative text-xs"
+    className="w-full max-w-sm h-[65vh] sm:h-[70vh] md:h-[75vh] mx-auto overflow-y-auto bg-white rounded-xl shadow-md border p-3 sm:p-4 flex flex-col justify-between relative text-xs"
   >
     <div className="flex flex-col items-center mt-2">
       {course.courseLogo && (
         <img src={course.courseLogo} alt="Course Logo" className="w-18 h-14 mb-1" />
       )}
-      <h2 className="text-base font-semibold text-center">{course.title}</h2>
+      <h2 className="text-sm sm:text-base font-semibold text-center leading-tight">{course.title}</h2>
     </div>
 
-    <div className="flex justify-center flex-wrap gap-3 mt-1">
+    <div className="flex justify-center flex-wrap gap-2 sm:gap-3 mt-1">
       {course.tools.map((tool, idx) => (
-        <div key={idx} className="flex flex-col items-center w-14">
+        <div key={idx} className="flex flex-col items-center w-12 sm:w-14">
           {toolLogos[tool] && (
-            <img src={toolLogos[tool]} alt={tool} className="w-7 h-7 object-contain" />
+            <img src={toolLogos[tool]} alt={tool} className="w-6 h-6 sm:w-7 sm:h-7 object-contain" />
           )}
-          <span className="text-[10px] text-center mt-1 text-gray-700">{tool}</span>
+          <span className="text-[9px] sm:text-[10px] text-center mt-1 text-gray-700 leading-tight">{tool}</span>
         </div>
       ))}
     </div>
@@ -153,11 +153,11 @@ const CourseCard = ({ course }) => (
     </div>
     <div className="text-[11px] text-gray-500">Weekday and Weekend Batches</div>
 
-    <div className="mt-3 flex gap-2">
-      <button className="flex items-center gap-1 border px-2 py-1 rounded text-[11px]">
+    <div className="mt-2 sm:mt-3 flex flex-col sm:flex-row gap-2">
+      <button className="flex items-center justify-center gap-1 border px-2 py-1 rounded text-[10px] sm:text-[11px]">
         <FaDownload /> Brochure
       </button>
-      <button className="bg-lime-500 hover:bg-lime-600 text-white px-3 py-1 rounded text-[11px]">
+      <button className="bg-lime-500 hover:bg-lime-600 text-white px-3 py-1 rounded text-[10px] sm:text-[11px]">
         Know More
       </button>
     </div>
@@ -174,11 +174,13 @@ const CourseCards = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 p-6 flex justify-center">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {courses.map(course => (
-          <CourseCard key={course.id + course.title} course={course} />
-        ))}
+    <div className="min-h-screen bg-gray-50 p-4 sm:p-6 flex justify-center">
+      <div className="w-full max-w-7xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+          {courses.map(course => (
+            <CourseCard key={course.id + course.title} course={course} />
+          ))}
+        </div>
       </div>
     </div>
   );

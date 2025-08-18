@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-tech-dark text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-2">
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-3 mt-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 mt-4">
               {[Facebook, Twitter, Instagram, Linkedin, Youtube].map((Icon, index) => (
                 <a
                   key={index}
@@ -79,29 +79,29 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Locations */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 lg:col-span-1">
             <h3 className="text-xl font-bold">Our Locations</h3>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col gap-4">
               {/* Deccan */}
-              <div className="flex-1 space-y-2">
+              <div className="space-y-2">
                 <iframe
-                  className="w-full h-48 rounded"
+                  className="w-full h-40 sm:h-48 rounded"
                   loading="lazy"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.257718510098!2d73.8436811!3d18.5172524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9def03dcfbb%3A0x426a5a51c3a72bde!2sRSSofttecs!5e0!3m2!1sen!2sin!4v1754114818517!5m2!1sen!2sin"
                 ></iframe>
-                <p className="font-semibold text-gray-200 text-sm">
+                <p className="font-semibold text-gray-200 text-xs sm:text-sm">
                   Office No 2, 4th Floor, Bhosale Shinde Arcade, JM Road, Near Deccan Bus Stop, Pune
                 </p>
               </div>
 
               {/* Karve Nagar */}
-              <div className="flex-1 space-y-2">
+              <div className="space-y-2">
                 <iframe
-                  className="w-full h-48 rounded"
+                  className="w-full h-40 sm:h-48 rounded"
                   loading="lazy"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.8975032064095!2d73.81171567456519!3d18.488301370160425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf0060be0469%3A0x527943f74e396e51!2sRS%20Softtecs%20-%20Best%20Java%20Classes%20in%20Pune!5e0!3m2!1sen!2sin!4v1754115039991!5m2!1sen!2sin"
                 ></iframe>
-                <p className="font-semibold text-gray-200 text-sm">
+                <p className="font-semibold text-gray-200 text-xs sm:text-sm">
                   Office No 29/B Wing, 4th Floor, Yashashree Park, Warje Malwadi Rd, Near Karve Nagar PMT Bus Stop, Karve Nagar, Pune
                 </p>
               </div>
@@ -109,7 +109,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="w-full max-w-md bg-gray-900 p-6 rounded-lg shadow-lg">
+          <div className="w-full bg-gray-900 p-4 sm:p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-bold mb-4 text-white">Contact Us</h3>
             <form onSubmit={handleSubmit} className="space-y-4 mb-0">
               <input
@@ -155,7 +155,7 @@ const Footer: React.FC = () => {
             <p className="text-gray-400 text-center md:text-left">
               © {currentYear} RS Softtecs. All rights reserved.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 mt-4 md:mt-0">
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 Privacy Policy
               </a>

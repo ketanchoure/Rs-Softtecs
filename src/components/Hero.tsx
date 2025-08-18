@@ -38,11 +38,11 @@ const HeroWithForm: React.FC = () => {
   return (
     <section className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 pt-20 pb-16 relative">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-start">
           {/* LEFT: Hero Text */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 <span className="text-foreground">Freshers Are Fighter's</span>
                 <br />
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
@@ -50,7 +50,7 @@ const HeroWithForm: React.FC = () => {
                 </span>
               </h1>
 
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg">
                 Learn with a Highly Structured, Personalized & Guided World-Class Program.
                 To Become the Best Tech Professionals and get Placed at Top Product Based Companies.
               </p>
@@ -75,18 +75,18 @@ const HeroWithForm: React.FC = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">10000+</div>
-                <div className="text-sm text-muted-foreground">Students Placed</div>
+                <div className="text-2xl sm:text-3xl font-bold text-primary">10000+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Students Placed</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">250+</div>
-                <div className="text-sm text-muted-foreground">Partner Companies</div>
+                <div className="text-2xl sm:text-3xl font-bold text-primary">250+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Partner Companies</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">98%</div>
-                <div className="text-sm text-muted-foreground">Success Rate</div>
+                <div className="text-2xl sm:text-3xl font-bold text-primary">98%</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Success Rate</div>
               </div>
             </div>
           </div>
@@ -101,21 +101,21 @@ const HeroWithForm: React.FC = () => {
         href="https://wa.me/+919970981875?"
         target="_blank"
         rel="noopener noreferrer"
-        className="transition-transform transform hover:scale-105 fixed bottom-10 right-10 z-50"
+        className="transition-transform transform hover:scale-105 fixed bottom-6 right-4 sm:bottom-10 sm:right-10 z-50"
       >
         <img
           src="whatsapp (2).png"
           alt="WhatsApp Logo"
-          className="w-16 h-16 animate-float"
+          className="w-12 h-12 sm:w-16 sm:h-16 animate-float"
         />
       </a>
 
       {/* Google Review Floating Button */}
       <button
         onClick={() => setIsReviewOpen(true)}
-        className="fixed bottom-10 left-10 z-50 bg-black shadow-lg rounded-full p-3 hover:scale-105 transition-transform"
+        className="fixed bottom-6 left-4 sm:bottom-10 sm:left-10 z-50 bg-black shadow-lg rounded-full p-2 sm:p-3 hover:scale-105 transition-transform"
       >
-        <img src="Google.webp" alt="Google Reviews" className="w-14 h-14" />
+        <img src="Google.webp" alt="Google Reviews" className="w-10 h-10 sm:w-14 sm:h-14" />
       </button>
 
       {/* Google Review Modal */}
