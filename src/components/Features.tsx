@@ -14,6 +14,7 @@ import {
   Target,
   TrendingUp,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Features = () => {
   useEffect(() => {
@@ -96,6 +97,7 @@ const Features = () => {
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {features.map((feature) => (
+            <Link to={"/whychooseus"}>
             <Card
               key={feature.title}
               data-aos="zoom-in"
@@ -118,7 +120,11 @@ const Features = () => {
                 </p>
               </CardContent>
             </Card>
-          ))}
+            </Link>
+
+          ))
+          
+          }
         </div>
 
         {/* Bottom Stats */}

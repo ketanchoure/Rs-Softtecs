@@ -1,0 +1,117 @@
+[
+    {
+      "title": "java-full-stack-development",
+      "displayName": "Java Full Stack Development",
+      "description": "Become a highly skilled full-stack developer by mastering both frontend and backend technologies using JavaScript and its ecosystem. This course gives you hands-on experience building modern, scalable web applications.",
+      "overview": "This program is designed for aspiring developers who want to build interactive and full-fledged web applications using the JavaScript stack. You’ll learn core web technologies, front-end frameworks, backend server handling, and deploying your projects on the web. No prior experience required — we start from scratch and take you to job-ready.",
+      "topics": [
+        "HTML & CSS – Structure and styling of web pages",
+        "JavaScript (ES6+) – Logic, interactivity, and browser APIs",
+        "Responsive Design – Mobile-first layouts and Flexbox/Grid",
+        "React.js Basics – Components, props, hooks, and state management",
+        "Git & GitHub – Version control and collaboration workflow",
+        "APIs and REST – Consuming and integrating third-party services",
+        "Node.js (Intro) – Back-end JavaScript and Express basics",
+        "Deployment – Hosting your full-stack app on Netlify or Vercel"
+      ],
+      "tools": [
+        "VS Code",
+        "Postman",
+        "Chrome DevTools",
+        "MongoDB (Optional)",
+        "Express.js",
+        "React Router",
+        "Tailwind CSS",
+        "Nodemon"
+      ],
+      "careers": [
+        "Full Stack Developer",
+        "Frontend Developer",
+        "Backend Developer",
+        "React Developer",
+        "Junior Software Engineer",
+        "Web Application Developer"
+      ],
+      "contact": {
+        "whatsapp": "919970981875",
+        "email": "info@rssofttecs.com"
+      }
+    },
+    {
+      "title": "python-full-stack-development",
+      "displayName": "Python Full Stack Development",
+      "description": "Learn to build powerful web applications from scratch using Python. This course covers everything from frontend structure to backend logic and database operations.",
+      "overview": "Python is one of the most in-demand languages for modern web development. In this course, you’ll gain hands-on experience building interactive UIs and scalable backend logic using tools like Django or Flask. It’s beginner-friendly yet career-ready.",
+      "topics": [
+        "HTML, CSS, and Bootstrap – Building the UI",
+        "JavaScript & DOM Manipulation",
+        "Python Programming Essentials",
+        "Flask/Django Basics for Backend Development",
+        "RESTful APIs and JSON",
+        "Database Integration using MySQL/PostgreSQL",
+        "Authentication and CRUD operations",
+        "Deploying Full Stack Apps using Heroku or Render"
+      ],
+      "tools": [
+        "VS Code",
+        "Postman",
+        "Python 3.x",
+        "Django/Flask",
+        "SQLite / MySQL",
+        "Git & GitHub",
+        "Bootstrap",
+        "Jinja Templates"
+      ],
+      "careers": [
+        "Python Full Stack Developer",
+        "Backend Python Developer",
+        "Django/Flask Developer",
+        "Web Application Engineer",
+        "Junior Software Developer",
+        "API Developer"
+      ],
+      "contact": {
+        "whatsapp": "919970981875",
+        "email": "info@rssofttecs.com"
+      }
+    },
+    {
+      "title": "cloud-computing",
+      "displayName": "Cloud Computing",
+      "description": "Master cloud platforms and modern infrastructure design with this hands-on Cloud Computing course. Learn how to build, deploy, and manage applications in the cloud.",
+      "overview": "Cloud computing powers today's tech. This course equips you with the skills to work on AWS, Azure, or Google Cloud, covering deployment, orchestration, cost optimization, and cloud-native tools.",
+      "topics": [
+        "Cloud Fundamentals: IaaS, PaaS, SaaS",
+        "Public vs Private vs Hybrid Cloud",
+        "Virtualization and Containers (Docker)",
+        "AWS / Azure / Google Cloud Overview",
+        "Cloud Security Essentials",
+        "CI/CD Pipelines in the Cloud",
+        "Storage and Databases in Cloud",
+        "Monitoring and Cloud Cost Management"
+      ],
+      "tools": [
+        "AWS / Azure / GCP",
+        "Docker",
+        "Git & GitHub",
+        "Terraform / CloudFormation",
+        "Jenkins",
+        "Kubernetes (Intro)",
+        "Cloud CLI Tools",
+        "Visual Studio Code"
+      ],
+      "careers": [
+        "Cloud Engineer",
+        "DevOps Engineer",
+        "Cloud Solutions Architect",
+        "Site Reliability Engineer (SRE)",
+        "Infrastructure Engineer",
+        "Platform Engineer"
+      ],
+      "contact": {
+        "whatsapp": "919970981875",
+        "email": "info@rssofttecs.com"
+      }
+    }
+  ]
+  
