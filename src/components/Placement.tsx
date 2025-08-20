@@ -151,7 +151,9 @@ const AlumniSection = () => {
       </div>
 
       <div className="placement-button-wrap">
+        <a href="/success-stories">
         <button className="placement-button">View All Success Stories</button>
+        </a>
       </div>
 
       <Contact/>

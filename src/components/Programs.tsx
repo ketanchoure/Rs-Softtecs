@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FaClock, FaDownload } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 // Course logo images
 const courseLogos = {
@@ -65,7 +66,8 @@ const toolLogos = {
 const courses = [
   {
     id: 1,
-    title: 'Java Full Stack Development',
+    title: "java-full-stack-development",
+    displayName: "Java Full Stack Development",
     courseLogo: courseLogos.Java,
     description: 'Develop robust applications with Java, Spring Boot, and modern front-end tools.',
     tools: ['C', 'C++', 'SQL', 'Core Java', 'Advance Java', 'React'],
@@ -73,7 +75,8 @@ const courses = [
   },
   {
     id: 2,
-    title: 'Python Full Stack Development',
+    title: "python-full-stack-development",
+    displayName: "Python Full Stack Development",
     courseLogo: courseLogos.Python,
     description: 'Build dynamic web applications using Python, Django, and front-end technologies.',
     tools: ['React', 'JavaScript', 'Angular', 'Python', 'Django', 'SQL', 'MySQL', 'MongoDB'],
@@ -81,7 +84,8 @@ const courses = [
   },
   {
     id: 3,
-    title: 'Cloud Computing',
+    title: "cloud-computing",
+    displayName: "Cloud Computing",
     courseLogo: courseLogos.CloudComputing,
     tools: ['Linux', 'AWS', 'DevOps'],
     tags: ['UNLIMITED INTERVIEWS', 'INTEGRATED INTERNSHIP'],
@@ -118,7 +122,7 @@ const CourseCard = ({ course }) => (
       {course.courseLogo && (
         <img src={course.courseLogo} alt="Course Logo" className="w-18 h-14 mb-1" />
       )}
-      <h2 className="text-base font-semibold text-center">{course.title}</h2>
+      <h2 className="text-base font-semibold text-center">{course.displayName}</h2>
     </div>
 
     <div className="flex justify-center flex-wrap gap-3 mt-1">
@@ -177,7 +181,9 @@ const CourseCards = () => {
     <div className="min-h-screen bg-gray-50 p-6 flex justify-center">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {courses.map(course => (
-          <CourseCard key={course.id + course.title} course={course} />
+          <Link to={`/course/${course.title}`}>
+          <CourseCard key={course.id + course.displayName} course={course} />
+          </Link>
         ))}
       </div>
     </div>
