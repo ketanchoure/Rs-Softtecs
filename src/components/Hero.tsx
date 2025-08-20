@@ -111,15 +111,15 @@ const HeroWithForm: React.FC = () => {
       </a>
 
       {/* Google Review Floating Button */}
-      <button
+      {/* <button
         onClick={() => setIsReviewOpen(true)}
         className="fixed bottom-10 left-10 z-50 bg-black shadow-lg rounded-full p-3 hover:scale-105 transition-transform"
       >
         <img src="Google.webp" alt="Google Reviews" className="w-14 h-14" />
-      </button>
+      </button> */}
 
       {/* Google Review Modal */}
-      {isReviewOpen && (
+      {/* {isReviewOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[100]">
           <div className="bg-white rounded-lg w-[90%] md:w-[70%] lg:w-[50%] h-[80%] relative shadow-lg">
             <button
@@ -136,7 +136,7 @@ const HeroWithForm: React.FC = () => {
             ></iframe>
           </div>
         </div>
-      )}
+      )} */}
     </section>
   );
 };
